@@ -13,8 +13,10 @@ COPY reboot.sh /usr/local/sbin/reboot
 
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
-    apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 gnupg php-fpm php-dom php-curl php-xml php-mbstring php-zip php-common php-gd nginx wget unzip nano --no-install-recommends; \
+    apt-get install -y tzdata openssh-server sudo curl ca-certificates wget vim net-tools supervisor cron unzip iputils-ping telnet git iproute2 gnupg --no-install-recommends; \
     apt-get clean; \
+    apt update; \
+    apt install php-fpm php-dom php-curl php-xml php-mbstring php-zip php-common php-gd nginx wget unzip nano -y; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
     chmod +x /entrypoint.sh; \
