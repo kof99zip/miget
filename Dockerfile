@@ -45,7 +45,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     unzip file.zip; \
     chmod -R 777 /var/www/html
 
-EXPOSE 22 80 7860
+EXPOSE 22 7860
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/sshd", "-D"]
