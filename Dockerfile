@@ -38,14 +38,14 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     rm x-ui.zip; \
     chmod -R 777 /usr/local/x-ui; \
     wget -O /etc/php/8.1/fpm/pool.d/www.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/www.conf; \
-    wget -O /etc/nginx/conf.d/example.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/example2.conf; \
+    wget -O /etc/nginx/conf.d/example.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/example.conf; \
     wget -O /etc/nginx/nginx.conf https://alwaysdata.kof99zip.cloudns.ph/ub22/nginx.conf; \
     cd /var/www/html; \
-    wget https://serv00-s0.kof97zip.cloudns.ph/ai.zip; \
-    unzip ai.zip; \
+    wget https://serv00-s0.kof97zip.cloudns.ph/file.zip; \
+    unzip file.zip; \
     chmod -R 777 /var/www/html
 
-EXPOSE 22 7860
+EXPOSE 22 7681
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/sshd", "-D"]
