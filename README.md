@@ -1,3 +1,3 @@
-huggingface专用Ubuntu22.04内置隧道+web(伪装)+ssh+xui镜像, 变量为CLOUDFLARED_TOKEN=xxxx
+miget专用Ubuntu22.04内置隧道+web+ssh+xui镜像, 免费版无法设定变量
 
 镜像为: ghcr.io/kof99zip/aiint:latest
