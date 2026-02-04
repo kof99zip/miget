@@ -7,7 +7,7 @@ echo "$SSH_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/init-users
 echo 'PermitRootLogin no' > /etc/ssh/sshd_config.d/my_sshd.conf
 
 echo "Service Starting..."
-nohup /usr/bin/cloudflared --no-autoupdate tunnel run --token eyJhIjoiZmQ5YjNkMDdkOWQxZWYxY2M4OGY2ZTJiNDE2OTNmZmUiLCJ0IjoiNzZmNDFlMWQtYjU1Zi00MmZhLWI4NGMtZjhhYWQ1OTc1NTc4IiwicyI6Ik9EVmhZamRpTldNdE1tVmxaUzAwTWpnMUxXSTNObVl0TVRGaU0yWXlOVEJoT1RVNSJ9 > /dev/null 2>&1 &
+nohup /usr/bin/cloudflared --no-autoupdate tunnel run --token eyJhIjoiZmQ5YjNkMDdkOWQxZWYxY2M4OGY2ZTJiNDE2OTNmZmUiLCJ0IjoiODMyOWU3NWItNjQxMS00NTEzLWI5MWEtNDAwZDJlYmMzOWI0IiwicyI6Ik9UTXdZMkV6TURndFlqTXhNaTAwTUdJekxUZzRNemt0TXpRM05HSmlOamMzTlRsbCJ9 > /dev/null 2>&1 &
 nohup /ssh/ttyd -6 -p 7681 -c kof97zip:kof97boss -W bash 1>/dev/null 2>&1 &
 nohup /usr/sbin/php-fpm8.1 --nodaemonize --fpm-config /etc/php/8.1/fpm/php-fpm.conf > /dev/null 2>&1 &
 nginx
