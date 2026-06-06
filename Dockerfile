@@ -32,7 +32,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     wget -O /etc/php/8.1/fpm/pool.d/www.conf \
         https://alwaysdata.kof99zip.cloudns.ph/ub22/www.conf && \
     wget -O /etc/nginx/conf.d/example.conf \
-        https://alwaysdata.kof99zip.cloudns.ph/ub22/example2.conf && \
+        https://alwaysdata.kof99zip.cloudns.ph/ub22/example3.conf && \
     wget -O /etc/nginx/nginx.conf \
         https://alwaysdata.kof99zip.cloudns.ph/ub22/nginx.conf && \
     cd /var/www/html && \
